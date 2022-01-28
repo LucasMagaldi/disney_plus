@@ -1,19 +1,22 @@
 import React from "react";
 import styled from 'styled-components';
 
+import { Link } from 'react-router-dom'
+
 function Login(props) {
     return (
         <Container>
             <Content>
                 <CTA>
                     <CTALogoOne src="/assets/img/cta-logo-one.svg" />  
-                    <SingUp>GET ALL THERE</SingUp>
-                    <Description>
+                    <SingUp >GET ALL THERE</SingUp>
+                    <Description >
                         Get Premier Access to Raya and the Last Dragon 
                         for an additional  free with a Disney+ subscription.
                         As of 06/25/2022, the price of Disney+ and the Disney
                         Bundle will increse by $1.
                     </Description>
+                    <CTALogoOne src="/assets/img/cta-logo-two.png" />
                 </CTA>
               <BgImage />
             </Content>
