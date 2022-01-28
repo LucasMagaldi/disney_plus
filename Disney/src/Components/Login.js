@@ -7,6 +7,7 @@ function Login(props) {
             <Content>
                 <CTA>
                     <CTALogoOne src="/assets/img/cta-logo-one.svg" />  
+                    <SingUp>GET ALL THERE</SingUp>
                 </CTA>
               <BgImage />
             </Content>
@@ -19,7 +20,7 @@ const Container = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: 24px;
+    font-size: 18px;
     height: 100vh;
 `
 
@@ -68,6 +69,24 @@ const CTALogoOne = styled.img`
     min-height: 1px;
     display: block;
     width: 100%;
+`
+
+const SingUp = styled.a`
+    font-weight: bold;
+    color: #f9f9f9;
+    background-color: #0063e5;
+    width: 100%;
+    letter-spacing: 1.5px;
+    font-size: 24px;
+    padding: 16px 0;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: center;
+
+    &:hover {
+        background-color: #0483ee;
+    }
+
 `
 
 export default Login;
