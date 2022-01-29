@@ -1,11 +1,12 @@
 import React from "react";
 import styled from 'styled-components';
-
+import Header from "./Header";
 import { Link } from 'react-router-dom'
 
 function Login(props) {
-    return (
+    return (       
         <Container>
+            <Header />
             <Content>
                 <CTA>
                     <CTALogoOne src="/assets/img/cta-logo-one.svg" />  
@@ -91,6 +92,7 @@ const SingUp = styled.a`
     border: 1px solid transparent;
     border-radius: 4px;
     text-align: center;
+    cursor: pointer;
 
     &:hover {
         background-color: #0483ee;
@@ -99,7 +101,7 @@ const SingUp = styled.a`
 `
 
 const Description = styled.p`
-    
+    font-size: 16px;
     color: hsla(0, 0%, 95.3%, 1);
     line-height: 1.5;
     text-align: center;
