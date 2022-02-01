@@ -2,14 +2,40 @@ import React from "react";
 
 import styled from "styled-components";
 
-function Header() {
+import { auth, provider, signInWithPopup, GoogleAuthProvider } from "../FirebaseConfig";
+
+function Header(props) {
+
+    const handleAuth = () => {
+        /*auth.signInWithPopup(provider)
+        .then((result) =>{
+            console.log(result)
+        }).catch((erro) => {
+            alert(erro)
+        })*/
+
+        signInWithPopup(auth, provider)
+            .then((res)=>{
+                const credential = GoogleAuthProvider.credentialFromResult(res);
+                console.log(credential);
+                const token = credential.accessToken;
+                console.log(token);
+                const user = res.user;
+                console.log(user);
+                localStorage.setItem("StatusConnect", true);
+               window.location.href = "/home";
+            }).catch((erro)=>{
+                console.log(erro);
+            });
+    }
+
     return (
         <Container>
-            <Logo>
+            <Logo href='/'>
                
-                <img src="/assets/img/logo.svg" />
+                <img src="/assets/img/logo.svg"  />
             </Logo>
-            <LoginButton href="https://www.youtube.com/">LOGIN</LoginButton>
+            <LoginButton onClick={handleAuth}>LOGIN</LoginButton>
         </Container>
     )
 }
@@ -31,12 +57,11 @@ const Container = styled.div`
 
 const Logo = styled.a`
    position: relative;
-   
+   cursor: pointer;
 
    img { 
        width: 100%;
        height: 50px;
-       cursor: pointer;
    }
 `
 

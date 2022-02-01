@@ -1,13 +1,10 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Login from './Components/Login';
+import MyRoutes from './routes';
 
 function App() {
-  return (
-    <div className="App">
-      <Login />
-    </div>
-  );
+  return <MyRoutes />
 }
 
 export default App;
