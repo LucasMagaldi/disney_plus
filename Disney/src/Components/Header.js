@@ -17,13 +17,15 @@ function Header(props) {
         signInWithPopup(auth, provider)
             .then((res)=>{
                 const credential = GoogleAuthProvider.credentialFromResult(res);
-                console.log(credential);
                 const token = credential.accessToken;
-                console.log(token);
                 const user = res.user;
                 console.log(user);
+                const name = user.displayName;
+                const photo = user.photoURL;
                 localStorage.setItem("StatusConnect", true);
-               window.location.href = "/home";
+                localStorage.setItem("name", name );
+                localStorage.setItem("photoURL", photo);
+                window.location.href = "/home";
             }).catch((erro)=>{
                 console.log(erro);
             });
