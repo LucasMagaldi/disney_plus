@@ -50,7 +50,7 @@ function ImgSlider(props) {
 
 
 const Carousel = styled(Slider)`
-    margin-top: 20px;
+    margin-top: 0px;
 
     & > button {
         opacity: 0;
@@ -66,9 +66,13 @@ const Carousel = styled(Slider)`
 
  ul li button {
      &:before {
-         font-size: 20px;
-         color: white;
+         font-size: 10px;
+         color: rgb(150, 158, 171);
      }
+ }
+
+ li.stick-active button:before {
+     color: white;
  }
 
  .stick-list {
@@ -78,15 +82,26 @@ const Carousel = styled(Slider)`
 `
 
 const Wrap = styled.div`
-    cursor: pointer;
+      a {
     border-radius: 4px;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+      rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    padding: 4px;
+      }
+    img {
+      width: 100%;
+      height: 100%;
+    }
 
     & > img {
         width: 100%;
     }
 
     &:hover {
-        border: 5px solid white;
+        border: 3px solid white;
     }
 `
 
