@@ -100,7 +100,7 @@ const Wrap = styled.div`
         width: 100%;
     }
 
-    &:hover {
+    & a:hover {
         border: 3px solid white;
     }
 `
