@@ -19,15 +19,30 @@ function ImgSlider(props) {
     return (
         <div>
             <Carousel {...settings}>
-                <div>
-                   <h3>Nps</h3>
-                </div>
-                <div>
-                   <h3>1</h3>
-                </div>
-                <div>
-                   <h3>778</h3>
-                </div>
+                <Wrap>
+                  <a>
+                      <img src="/assets/img/slider-badging.jpg"/>
+                  </a>
+                </Wrap>
+
+                <Wrap>
+                  <a>
+                      <img src="/assets/img/slider-scale.jpg"/>
+                  </a>
+                </Wrap>
+
+                <Wrap>
+                  <a>
+                      <img src="/assets/img/slider-badag.jpg"/>
+                  </a>
+                </Wrap>
+
+                <Wrap>
+                  <a>
+                      <img src="/assets/img/slider-scales.jpg"/>
+                  </a>
+                </Wrap>
+
             </Carousel>
         </div>
     )
@@ -60,6 +75,19 @@ const Carousel = styled(Slider)`
      overflow: initial;
  }
 
+`
+
+const Wrap = styled.div`
+    cursor: pointer;
+    border-radius: 4px;
+
+    & > img {
+        width: 100%;
+    }
+
+    &:hover {
+        border: 5px solid white;
+    }
 `
 
 export default ImgSlider;
