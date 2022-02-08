@@ -12,6 +12,7 @@ function Main() {
             <ConteinerMain> 
                 <ImgSlider />
                 <Viewer />
+                
             </ConteinerMain>
             
         </Container>
@@ -19,7 +20,6 @@ function Main() {
 }
 
 const Container = styled.div`
-
 `
 const ConteinerMain = styled.div`
     position: relative;
