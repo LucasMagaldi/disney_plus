@@ -2,6 +2,7 @@ import React from "react";
 
 import HeaderMain from "./HeaderMain";
 import ImgSlider from "./ImgSlider";
+import Recommends from "./Recommends";
 import Viewer from "./Viewer";
 import styled from "styled-components";
 
@@ -12,7 +13,7 @@ function Main() {
             <ConteinerMain> 
                 <ImgSlider />
                 <Viewer />
-                
+                <Recommends />
             </ConteinerMain>
             
         </Container>
