@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from   'react-router-dom';
 
-function Recommends() {
+function NewDisney() {
     return (
         <Container>
-            <h2>Recommends to you</h2>
+            <h2>New on Disney+</h2>
             <Content>
+                
                 <Wrap>
                     <Link to='/'>
                         <img src="https://kanto.legiaodosherois.com.br/w760-h398-gnw-cfill-q80/wp-content/uploads/2020/05/legiao_W8OdG5Zz7Au4.png.jpeg" />
@@ -75,4 +76,4 @@ const Wrap = styled.div`
     }
 `
 
-export default Recommends;
+export default NewDisney;

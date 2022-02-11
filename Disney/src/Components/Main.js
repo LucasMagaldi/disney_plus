@@ -5,6 +5,9 @@ import ImgSlider from "./ImgSlider";
 import Recommends from "./Recommends";
 import Viewer from "./Viewer";
 import styled from "styled-components";
+import Originals from "./Originals";
+import NewDisney from "./NewDisney";
+import Trending from "./Trending"
 
 function Main() {
     return (
@@ -14,6 +17,9 @@ function Main() {
                 <ImgSlider />
                 <Viewer />
                 <Recommends />
+                <NewDisney />
+                <Originals />
+                <Trending />
             </ConteinerMain>
             
         </Container>
